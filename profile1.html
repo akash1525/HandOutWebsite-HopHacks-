@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 500px;
+    }
+</style>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,300italic" rel="stylesheet">
+    <title>Hannah Collin</title>
+
+
+    <link rel="manifest" href="/resources/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/resources/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/resources/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/resources/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+
+</head>
+
+<html>
+
+<body>
+
+    <nav>
+        <div class="row">
+            <ul class="profile-main-nav js--main-nav">
+                <li>
+                    <a href="index.html">Home</a>
+
+                </li>
+                <li>
+                        <a href="ListOfProfiles.html">People Who Need Help</a>
+                    </li>
+
+                <li>
+                    <a href="login.html">Log In</a>
+
+                </li>
+                <li>
+                    <a href="signup.html">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="section-quote js--section-quote" id="quote">
+            <h1 class="center" style="color:black">Hannah Collin</h1>
+            <div>
+                <blockquote class="quote">
+                    <i class="center">From Hampden, Baltimore</i>
+                </blockquote>
+            </div>
+        </section>
+
+
+        <div style="background-color:#333; text-align: center; padding:20px">
+            <br><iframe width="560" height="315" src="https://www.youtube.com/embed/InrMqePFAQ8?rel=0&amp;fs=0&amp;showinfo=0"
+                frameborder="0" allow="autoplay; encrypted-media" showinfo=0 allowfullscreen></iframe><br>
+            <br>
+            <p style="color: aliceblue">We need help with: <br> - Meeting our high medical bill <br> - Preparing
+                lunches for our daughter <br> - Getting our growing son some winter clothes</p>
+            <img class="profilePhoto" src="resources/img/finalPic.png" alt="fundraising bar">
+            <p style="color: aliceblue">Have any questions? Feel free to ask! Ask/tell me anything!</p>
+
+            <form action="/action_page.php"><br>
+                <p style="color: aliceblue">Enter your message:</p> <br> <input type="text" name="message"><br>
+                <br><input type="submit" method="post" value="Submit" target="_self"><br>
+            </form>
+            <br>
+            <p style="color: aliceblue">Hannah is only 3 miles away from you!</p>
+        </div>
+
+        <div style=padding:-5px>
+        </div>
+
+        <div>
+            <br>
+            <p>Click the button below to donate!</p>
+            <br><button class="btn btn-ghost, js--scroll-to-start"><a href="https://www.paypal.com/donate/?token=aVItk-c1cPvwPYmM_LhbMXe_2ottjbxhy2rBhPxchRJe0nDRqpbtUHh3fOfZw0TSYkJl40&country.x=US&locale.x=">Donate</a></button>
+
+            <div id="volunteer">
+                <form action="/action_page.php">
+                    <br>
+                    <p>Select which services you would like to offer, in addition to or in place of donating!</p>
+                    <br>
+                    <p><input type="checkbox" name="chores" value="taxes">Playing with kids</p>
+                    <p><input type="checkbox" name="chores" value="taxes">Cooking lunches</p>
+                    <input type="checkbox" name="supply" value="clothes"> Clothes for young boys
+                    <br><input type="checkbox" name="supply" value="bike"> Bike for a small girl<br>
+                    <br><input type="submit" name="submit" value="Submit">
+                </form>
+                <section style="padding-bottom:100px"></section>
+            </div>
+    </main>
+
+    <script src="resources/js/scripts.js"></script>
+
+</body>
+
+</html>

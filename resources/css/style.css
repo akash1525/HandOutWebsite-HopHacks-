@@ -1,0 +1,436 @@
+/*-------------------------------------------------------*/
+/* BASIC SETUP */
+/*-------------------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+.clearfix {zoom: 1;}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/*-------------------------------------------------------*/
+/* REUSABLE COMPONENTS */
+/*-------------------------------------------------------*/
+
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.box {
+    padding: 1%;
+}
+
+/* ----- HEADINGS -----*/
+
+h1,
+h2,
+h3{ 
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 250%;
+    word-spacing: 4px;
+    text-transform: none;
+    letter-spacing: 2px;
+}
+
+h1:after {
+    display: block;
+    height: 2px;
+    background-color: #E2574C; 
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 160%;
+    color: #333;
+    word-spacing: 2px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #E2574C; 
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+
+/* ----- PARAGRAPHS ----- */
+
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+}
+
+/* ----- ICONS ----- */
+
+.icon-big {
+    font-size: 350%;
+    display: block;
+    color: #E2574C;
+    margin-bottom: 10px;
+}
+
+.icon-small {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #E2574C;
+    font-size: 120%;
+    margin-right: 10px;
+
+    /*secrets to align text and icons*/
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+/* ----- LINKS ----- */
+
+a:link,
+a:visited {
+    color: #E2574C;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #E2574C;
+    -webkit-transition: border-bottom 0.2s, color 0.2s;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+/* ----- BUTTONS ----- */
+
+.btn:link,
+.btn:visited,
+input[type=submit]{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+    background-color: #E2574C;
+    border: 1px solid #E2574C;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #E2574C;
+    color: #E2574C;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
+    background-color: #cf6d17;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    background-color: #DD3F33;
+    border: 1px solid #DD3F33;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    background-color: #E2574C;
+    border: 1px solid #E2574C;
+    color: #fff;
+}
+
+/*-------------------------------------------------------*/
+/* HEADER */
+/*-------------------------------------------------------*/
+
+header {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(0,0,0,0.7)), to(rgb(0,0,0,0.7))), url(img/hero-min.jpg);
+    background-image: linear-gradient(rgb(0,0,0,0.7), rgb(0,0,0,0.7)), url(img/hero-min.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 80%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+}
+
+.logo {
+    display: none;
+    height: 50px;
+    width: auto;
+    float: left;
+    margin-top: 5px;
+}
+
+.background-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+/* Main navi */
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 20px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #E2574C;
+}
+
+/* Mobile navi */
+.mobile-nav-icon {
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon i {
+    font-size: 200%;
+    color: #fff;
+}
+
+/* Sticky navi */
+.sticky {
+    position: fixed;
+    padding-bottom: 10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(255,255,255,0.98);
+    -webkit-box-shadow: 0 2px 2px #efefef;
+            box-shadow: 0 2px 2px #efefef;
+    z-index: 9999;
+}
+
+.sticky .main-nav {margin-top: 20px;}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    padding: 18px 0;
+    color: #555;
+}
+
+.sticky .logo {display: block;}
+
+/*-------------------------------------------------------*/
+/* DESCRIPTIONS */
+/*-------------------------------------------------------*/
+
+.section-descriptions .long-copy {
+    font-size: 110%;
+}
+
+/*-------------------------------------------------------*/
+/* SHARE STORIES */
+/*-------------------------------------------------------*/
+
+.section-shareStories {
+    background-color: #f6f6f6;
+}
+
+.section-shareStories h3 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 140%;
+}
+
+.shareStories_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.js--wp-1 p {
+    padding-top: 10%;
+    letter-spacing: 1px;
+    font-size: 100%;
+}
+
+/*-------------------------------------------------------*/
+/* OPTIONS */
+/*-------------------------------------------------------*/
+
+.js--wp-2 h3 {
+    font-weight: bold;
+}
+
+.donationVector_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.volunteerVector_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.foodVector_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+/* Profile Main navi */
+.profile-main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 20px;
+}
+
+.profile-main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.profile-main-nav li a:link,
+.profile-main-nav li a:visited {
+    padding: 8px 0;
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
+}
+
+.profile-main-nav li a:hover,
+.profile-main-nav li a:active {
+    border-bottom: 2px solid #E2574C;
+}
+
+/* stuff that Justin is working on for the profile pages
+it's probably shitty but whatever I agree*/
+
+.profilePhoto {
+    border-radius: 25px;
+    margin: 25px;
+    width:auto;
+    height:200px;
+}
+
+.button {
+    color:lightgreen;  
+    width:50px;
+    height:25px;
+    text-decoration:none;  
+    padding:20px;
+}
+
+.button:hover {
+    color:darkgreen;
+    text-decoration-line: underline;
+}
+
+.quote {
+    text-align:center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:25px;
+}
+
+.donate {
+    background-color:orange;
+    width:50px;
+
+}

@@ -1,0 +1,153 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.intro {
+	width: 100%;
+    height: 100%;
+    background: url("img/login_background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: table;
+    top: 0;
+}
+
+.inner {
+	display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.content {
+	width: 26vw;
+    height: 62vh;
+    background: rgba(255,255,255,0.39);
+    margin: auto;
+    border-radius: 1%;
+    display: table;
+}
+
+.login_logo {
+	display: table-cell;
+    width: 42%;
+    height: 37%;
+    margin: auto;
+    border: 2px solid #fff;
+    border-radius: 100%;
+}
+
+.username {
+	display: table-cell;
+    margin-left: 3.5vw;
+    margin-top: 6vh;
+    padding: 1% 1% 1% 10%;
+    background: url("img/login_user.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-size: 20px;
+    font-family: 'Lato';
+    border: 0px;
+    border-bottom: 1px solid white;
+    width: 13.5vw;
+    color: #fff;
+}
+
+.password {
+	display: table-cell;
+    margin-left: 3.5vw;
+    margin-top: 6vh;
+    padding: 1% 1% 1% 10%;
+    background: url("img/login_user.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-size: 20px;
+    font-family: 'Lato';
+    border: 0px;
+    border-bottom: 1px solid white;
+    width: 13.5vw;
+}
+
+.password[placeholder] {
+	padding-left: 23%;
+    font-family: 'Lato';
+    font-size: 1.9vw;
+}
+
+.username[placeholder]{
+    padding-left: 23%;
+    font-family: 'Lato';
+    font-size: 1.9vw;
+}
+
+/* do not group these rules */
+*::-webkit-input-placeholder {
+    color: #fff;
+}
+*:-moz-placeholder {
+    /* FF 4-18 */
+    color: #fff;
+    opacity: 1;
+}
+*::-moz-placeholder {
+    /* FF 19+ */
+    color: #fff;
+    opacity: 1;
+}
+*:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #fff;
+}
+*::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #fff;
+}
+*::placeholder {
+    /* modern browser */
+    color: #fff;
+}
+
+.login_btn,
+.signup_btn{
+    text-decoration: none;
+    display: table;
+    text-align: center;
+    margin-top: 6%;
+    height: 3vh;
+    padding: 3% 0% 3% 0%;
+    background: #E2574C;
+    font-family: 'Lato';
+    font-size: 1.8vw;
+    color: #fff;
+}
+
+/* Main navi */
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 20px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #E2574C;
+}

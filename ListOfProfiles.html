@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+        }
+
+        .title {
+            color: grey;
+            font-size: 18px;
+        }
+
+        button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 22px;
+            color: #fff;
+        }
+
+        button:hover,
+        a:hover {
+            opacity: 0.7;
+        }
+
+        .columns {
+            float: left;
+            position: relative;
+            margin-right: 20px;
+        }
+
+        ul {
+            list-style: none;
+        }
+        #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+        background-color: grey;
+       }
+    </style>
+   <script>
+      // Initialize and add the map
+      function initMap() {
+        // The location of Uluru
+        var uluru = {lat: 39.3334, lng: -76.6326};
+        var uluru1 = {lat: 40.045753, lng: -74.6413};
+        var uluru2 = {lat: 39.3299, lng: -76.6205};                        
+        //document.getElementById("link").setAttribute("href",uluru);
+
+        // The map, centered at Uluru
+        var map = new google.maps.Map(
+            document.getElementById('map'), {zoom: 15, center: uluru1});
+        var map = new google.maps.Map(
+            document.getElementById('map'), {zoom: 15, center: uluru});    
+        var map = new google.maps.Map(
+            document.getElementById('map'), {zoom: 15, center: uluru2});                                                                           
+                                            
+        // The marker, positioned at Uluru
+        var marker = new google.maps.Marker({position: uluru, map: map});
+        var marker1 = new google.maps.Marker({position: uluru1, map: map});
+        var marker2 = new google.maps.Marker({position: uluru2, map: map});        
+
+
+        
+        //document.getElementById("link").setAttribute("href",marker);
+
+      }
+          </script>
+
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFE7BW14Cb7SbUyjvlp4rYhnnBHCCQSg4&callback=initMap">
+    </script>              
+
+</head>
+
+<body>
+
+    <h2 style="text-align:center">Profiles of Those in Need</h2>
+<p> <center>HandOut's algorithm has selected profiles of people near you. Feel free to visit each person's profile to learn more about their needs.</center></p>
+
+    <div class="card">
+        <div style="float: left; width: 50%;">
+            <ul>
+
+                <li>
+                    <img src="resources/img/profilePic.png" alt="John" style="width:100%">
+                    <h1>Hannah Collin</h1>
+                        <p>I am from Hampden. My immune system repressants have taken their toll on my savings, and I do not have enough money to support my children and the house. Please help!</p>
+                        <p><button><a href="/Users/sichael/VSCode-workspace/HandOut/profile1.html">Donate</a></button></p>
+                </li>
+                <li>
+                    <img src="resources/img/secondPatient.png" alt="John" style="width:100%">
+                    <h1>Sarah Resin</h1>
+                    <p>I am a single mother, and my 1-year old has an ongoing infection, so I can't work and must stay home for her.</p>
+                    <p><button><a href="donate.html">Donate</a></button></p>
+                </li>
+                <li>
+                    <img src="resources/img/thirdPatient.png" alt="John" style="width:100%">
+                    <h1>Jorge Duarte</h1>
+                    <p>I just broke my leg and cannot work for over a month. 
+                        My ambulance bill drained my savings, and I don't know what to do.
+                        Any bit of help would mean the world to me.                                                                                                                        
+                    </p>
+                    <p><button><a href="donate.html">Donate</a></button></p>
+                </li>
+            </ul>
+
+        </div>
+
+        <div style="float: left; width: 50%;">
+            <ul>
+                <li>
+                    <img src="resources/img/fourthPatient.png" alt="John" style="width:100%">
+                    <h1>Matthew Jones</h1>
+                    <p>I am a victim of paralysis, and I am unable to work at my job at a construction site. I need help taking care of my grandmother, who has Alzheimer's.</p>
+                    <p><button><a href="donate.html">Donate</a></button></p>
+                </li>
+
+                <li>
+                    <img src="resources/img/fifthPatient.png" alt="John" style="width:100%">
+                    <h1>Melissa DeVoe</h1>
+                    <p>My child has fragile X syndrome. A team at MIT developed an experimental treatment, but it is extremely expensive.</p>
+                    <p><button><a href="donate.html">Donate</a></button></p>
+                </li>
+                <li>
+                    <img src="resources/img/firstPatient.png" alt="John" style="width:100%">
+                    <h1>John Irons</h1>
+                    <p>I am struggling financially, and I am handicapped and in a wheelchair. I need someone to assist me in moving around the house, and a personal nurse would be a nice too.</p>
+                    <p><button><a href="donate.html">Donate</a></button></p>
+                </li>
+            </ul>       
+          </div>
+          <div class="row" style="text-align: center;">
+            <p><button><a href="donate.html">See more profiles</a></button></p>
+            <br><p>Click on markers on the map to see the profiles of sick people in your local area (10-mile radius).</p>
+
+         </div> 
+
+         <div id="map"></div>
+         <!--
+        <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d15136.223878811967!2d-76.63482655602763!3d39.32478329687649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x89c804df8502f88d%3A0x303d58494fa04c66!2sJohns+Hopkins+University%2C+Baltimore%2C+MD+21218!3m2!1d39.329901299999996!2d-76.6205177!5e0!3m2!1sen!2sus!4v1537060693482"
+            width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>--> 
+<br>
+    </div>
+
+</body>
+
+</html>

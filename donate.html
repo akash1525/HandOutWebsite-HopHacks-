@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<style>
+    .center {   
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+            width: 500px;
+    }
+</style>
+    
+<head>
+
+    <meta charset = "utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,300italic" rel="stylesheet">
+    <title>HandOut: Donation page</title>
+
+    
+    <link rel="manifest" href="/resources/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/resources/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/resources/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/resources/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+<html>
+<body align="middle">
+    <main>
+        <div id="donate">
+            <p>Any donation you make is <i>tax deductable</i> and changes lives.</p>
+            <br><p>Enter amount $</p><input style="width:40px" type="number" name="dollars" value="0">.<input style="width:40px" type="number" name="cents" value="00">
+            Stripe:   
+            <form action="your-server-side-code" method="POST">
+                <script>
+                
+                  src="https://checkout.stripe.com/checkout.js"
+                  class="stripe-button"
+                  data-key="pk_test_8IZR6n7njRkXX0SKEv5aCHuI"
+                  data-amount="2000"
+                  data-name="Handout"
+                  data-description="Donate to Jane Doe"
+                  data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                  data-locale="auto"
+                </script>
+              </form>  
+              PayPal:
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+                <!-- Identify your business so that you can collect the payments. -->
+                <input type="hidden" name="business"
+                    value="HandOut">
+            
+                <!-- Specify a Donate button. -->
+                <input type="hidden" name="cmd" value="_donations">
+            
+                <!-- Specify details about the contribution -->
+                <input type="hidden" name="item_name" value="Jane Doe">
+                <input type="hidden" name="item_number" value="Support with medical bill">
+                <input type="hidden" name="currency_code" value="USD">
+            
+                <!-- Display the payment button. -->
+                <input type="image" name="submit"
+                src=http://www.digitaltrends.com/wp-content/uploads/2011/12/Paypal_button1.jpg
+                alt="Donate" style="width:120px;height:40px">
+                <img alt="" width="1" height="1"
+                src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+            
+              </form>
+        </div>
+        
+        <div id="volunteer">
+            <p>Are you able to help Jane with making meals for her family, doing her taxes, or ...?
+            <form action="/action_page.php">
+                <br><p>Cooking<input type="checkbox" name="chores" value="cooking"></p>
+                <br>Taxes<input type="checkbox" name="chores" value="taxes">
+            </form>
+
+
+        </div>
+
+        <div id="supply">
+            <p>Would you be willing to donate any of the following?</p>
+            <form action="/action_page.php">
+                <br>Clothes for young boys<input type="checkbox" name="supply" value="clothes">
+                <br>Bike for a small girl<input type="checkbox" name="supply" value="bike">
+
+        </div>
+</body>
+</html>
